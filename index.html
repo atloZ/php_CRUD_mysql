@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+    <head>
+        <title>Rekusz tesztüzem</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="scripts/script_main.js"></script>
+    </head>
+
+    <body>
+
+        <div class="w3-container" style="margin: auto; width: 85%">
+            <div class="w3-panel w3-light-grey" style="margin:0">
+
+            </div>
+            <table class="w3-table-all" id="teszt_tabla">
+                <tr class="w3-grey">
+                    <th>ID</th>
+                    <th>Név</th>
+                    <th>Email</th>
+                    <th><button onclick="document.getElementById('hozzaad_teszt_modal').style.display='block'"
+                            class="w3-button w3-black w3-circle w3-ripple" style="outline: none">+</button></th>
+                </tr>
+            </table>
+
+            <div class="w3-modal" id="hozzaad_teszt_modal">
+                <div class="w3-modal-content">
+                    <div class="w3-container w3-black">
+                        <h2>Adat hozzáadása</h2>
+                    </div>
+                    <input class="w3-input" type="text" placeholder="Név" id="uj_teszt_nev">
+                    <input class="w3-input" type="text" placeholder="Email" id="uj_teszt_email">
+                    <span onclick="hozzaad_adatok_clear()"
+                        class="w3-button w3-light-grey">Mégsem</span>
+                    <button onclick="hozzaad()" class="w3-button w3-square w3-green w3-ripple"
+                        style="outline: none">Hozzáad</button>
+                </div>
+            </div>
+
+            <div class="w3-modal" id="modosit_teszt_modal">
+                <div class="w3-modal-content">
+                    <div class="w3-container w3-black">
+                        <h2>Adat hozzáadása</h2>
+                    </div>
+                    <input type="hidden" value="" id="mod_teszt_id">
+                    <input class="w3-input" type="text" placeholder="Név" id="mod_teszt_nev">
+                    <input class="w3-input" type="text" placeholder="Email" id="mod_teszt_email">
+                    <span onclick="modosit_adatok_clear()"
+                        class="w3-button w3-light-grey">Mégsem</span>
+                    <button onclick="modosit()" class="w3-button w3-square w3-green w3-ripple"
+                        style="outline: none">Módosít</button>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>
